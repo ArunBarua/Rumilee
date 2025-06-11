@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rumilee Romantic Andaman Tours</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #f8b8d0;
+            --secondary: #f5d7bf;
+            --accent: #e6a4b4;
+            --dark: #6d5d6e;
+            --light: #f9f5f6;
+            --gold: #d4af37;
+            --transition: all 0.4s ease;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            color: #333;
+            background-color: var(--light);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4 {
+            font-family: 'Playfair Display', serif;
+            font-weight: 600;
+            color: var(--dark);
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--accent);
+            color: white;
+            padding: 12px 28px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: var(--transition);
+            border: 2px solid var(--accent);
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background: transparent;
+            color: var(--accent);
+        }
+        
+        .btn-outline {
+            background: transparent;
+            color: var(--accent);
+            border: 2px solid var(--accent);
+        }
+        
+        .btn-outline:hover {
+            background: var(--accent);
+            color: white;
+        }
+        
+        /* Glassmorphism effect */
+        .glass {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+        }
+        
+        /* Header & Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            padding: 15px 0;
+            transition: var(--transition);
+        }
+        
+        header.scrolled {
+            background: rgba(255, 255, 255, 0.9);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            padding: 10px 0;
+        }
+        
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            font-style: italic;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 700;
+        }
+        
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+        
+        .nav-links li {
+            margin-left: 30px;
+        }
+        
+        .nav-links a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 500;
+            font-size: 16px;
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--accent);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent);
+            transition: var(--transition);
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .language-selector {
+            margin-left: 20px;
+            padding: 8px 12px;
+            border-radius: 5px;
+            border: 1px solid rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.3);
+            font-family: 'Poppins', sans-serif;
+            font-size: 14px;
+        }
+        
+        .hamburger {
+            display: none;
+            cursor: pointer;
+        }
+        
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background: var(--dark);
+            margin: 5px;
+            transition: var(--transition);
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1545579133-99bb5ab189bd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            padding: 0 20px;
+            z-index: 2;
+        }
+        
+        .hero h1 {
+            font-size: 4rem;
+            margin-bottom: 20px;
+            color: white;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Section Styling */
+        section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+            padding-bottom: 15px;
+            position: relative;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        /* About Section */
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 50px;
+        }
+        
+        .about-text {
+            flex: 1;
+        }
+        
+        .about-text h3 {
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+        
+        .about-image {
+            flex: 1;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            transition: var(--transition);
+        }
+        
+        .about-image:hover img {
+            transform: scale(1.05);
+        }
+        
+        /* Activities Section */
+        .activities-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .activity-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+            position: relative;
+        }
+        
+        .activity-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .activity-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .activity-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .activity-card:hover .activity-image img {
+            transform: scale(1.1);
+        }
+        
+        .activity-content {
+            padding: 20px;
+            background: white;
+        }
+        
+        .activity-content h3 {
+            margin-bottom: 10px;
+            color: var(--dark);
+        }
+        
+        /* Itinerary Section */
+        .itinerary-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .itinerary-day {
+            margin-bottom: 30px;
+            padding: 25px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .itinerary-day:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .itinerary-day h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--accent);
+            display: flex;
+            align-items: center;
+        }
+        
+        .itinerary-day h3 i {
+            margin-right: 10px;
+            color: var(--gold);
+        }
+        
+        /* Testimonials */
+        .testimonials-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            padding: 30px;
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '\201C';
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 4rem;
+            color: rgba(230, 164, 180, 0.2);
+            font-family: serif;
+            line-height: 1;
+        }
+        
+        .testimonial-content {
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 2;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 15px;
+            border: 3px solid var(--accent);
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+            font-size: 1.1rem;
+        }
+        
+        .author-info p {
+            color: var(--accent);
+            font-size: 0.9rem;
+        }
+        
+        /* Packages */
+        .packages-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .package-card {
+            padding: 40px 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            background: white;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        }
+        
+        .package-card.featured {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            z-index: 2;
+            border: 2px solid var(--accent);
+        }
+        
+        .package-card.featured::after {
+            content: 'Most Popular';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .package-title {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--dark);
+        }
+        
+        .package-price {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 25px;
+            font-weight: 700;
+        }
+        
+        .package-features {
+            list-style: none;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+        
+        .package-features li {
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+        
+        .package-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .package-features li i {
+            color: var(--accent);
+            margin-right: 10px;
+        }
+        
+        /* Contact Section */
+        .contact-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 50px;
+        }
+        
+        .contact-form {
+            padding: 40px;
+            border-radius: 10px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: 'Poppins', sans-serif;
+            font-size: 1rem;
+            transition: var(--transition);
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            border-color: var(--accent);
+            outline: none;
+            box-shadow: 0 0 0 2px rgba(230, 164, 180, 0.2);
+        }
+        
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: white;
+            padding: 60px 0 30px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        
+        .footer-column h3 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--primary);
+            padding-left: 5px;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            transition: var(--transition);
+        }
+        
+        .social-links a:hover {
+            background: var(--accent);
+            transform: translateY(-5px);
+        }
+        
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 3rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .package-card.featured {
+                transform: scale(1);
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hamburger {
+                display: block;
+                z-index: 1001;
+            }
+            
+            .nav-links {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                height: 100vh;
+                width: 70%;
+                background: rgba(255, 255, 255, 0.95);
+                backdrop-filter: blur(10px);
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                transition: var(--transition);
+                box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+            }
+            
+            .nav-links.active {
+                right: 0;
+            }
+            
+            .nav-links li {
+                margin: 15px 0;
+            }
+            
+            .language-selector {
+                margin-left: 0;
+                margin-top: 20px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#" class="logo">Rumilee</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#activities">Activities</a></li>
+                    <li><a href="#itinerary">Itinerary</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#packages">Packages</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <select class="language-selector">
+                        <option>English</option>
+                        <option>हिंदी</option>
+                        <option>বাংলা</option>
+                    </select>
+                </ul>
+                <div class="hamburger">
+                    <div class="line1"></div>
+                    <div class="line2"></div>
+                    <div class="line3"></div>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1>Romantic Escapes in Andaman</h1>
+            <p>Where love stories unfold amidst turquoise waters and golden sands</p>
+            <div class="hero-btns">
+                <a href="#packages" class="btn">Discover Packages</a>
+                <a href="#itinerary" class="btn btn-outline">View Itinerary</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Story</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Rumilee: Where Love Meets Light</h3>
+                    <p>Inspired by the 13th-century poet Rumi and love's eternal light, Rumilee crafts journeys where every moment is "made glorious by the light of love." We weave poetry into prose, transforming soft breezes on moonlit beaches into chapters of your own love story.</p>
+                    <p>Our name "Rumilee" merges the timeless wisdom of Rumi with the concept of love as light ("lee"), illuminating each moment of your romantic escape. As Rumi wrote: "Both light and shadow are the dance of Love. Love has no cause; it is the astrolabe of God's secrets."</p>
+                    <p>At Rumilee, we believe in crafting intimate experiences that linger in your heart long after the tan fades. From secluded beaches to candlelit dinners under the stars, we transform the breathtaking Andaman Islands into the canvas for your love story.</p>
+                </div>
+                <div class="about-image">
+                    <img src="https://images.unsplash.com/photo-1590523278191-995cbcda646b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1588&q=80" alt="Romantic beach couple">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Activities Section -->
+    <section id="activities" style="background-color: #faf5f7;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Romantic Experiences</h2>
+            </div>
+            <div class="activities-grid">
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://images.unsplash.com/photo-1579033462043-0f11a7862f7d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Scuba Diving">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Couples Scuba Diving</h3>
+                        <p>Dive into vibrant coral gardens together, discovering the underwater paradise hand-in-hand.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://images.unsplash.com/photo-1519046904884-53103b34b206?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1770&q=80" alt="Sunset Cruise">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Sunset Cruise</h3>
+                        <p>Sip cocktails as the sun melts into the sea, painting the sky in hues of passion.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-card">
+                    <div class="activity-image">
+                        <img src="https://images.unsplash.com/photo-1506477331477-33d5d8b3dc85?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1674&q=80" alt="Private Beach Picnic">
+                    </div>
+                    <div class="activity-content">
+                        <h3>Private Beach Picnic</h3>
+                        <p>Stroll hand-in-hand on a hidden beach at dusk, followed by a gourmet picnic under the stars.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Itinerary Section -->
+    <section id="itinerary">
+        <div class="container">
+            <div class="section-title">
+                <h2>4 Nights / 5 Days Itinerary</h2>
+            </div>
+            <div class="itinerary-container">
+                <div class="itinerary-day glass">
+                    <h3><i class="fas fa-sun"></i> Day 1: Arrival & Historic Charm</h3>
+                    <p>Arrive in Port Blair and unwind at a luxury beachfront resort. In the evening, visit the historic Cellular Jail and experience its famous Light & Sound Show under the stars, a poignant beginning to your journey.</p>
+                </div>
+                
+                <div class="itinerary-day glass">
+                    <h3><i class="fas fa-umbrella-beach"></i> Day 2: Island Paradise</h3>
+                    <p>Transfer to Havelock Island; spend the afternoon at Radhanagar Beach (voted one of Asia's best) enjoying sun and surf. At sunset, watch the sky blaze over the horizon and later indulge in a private candle-lit dinner on the sand.</p>
+                </div>
+                
+                <div class="itinerary-day glass">
+                    <h3><i class="fas fa-water"></i> Day 3: Underwater Wonders</h3>
+                    <p>Explore the underwater world together with a couples' scuba dive or snorkeling at Elephant Beach (the coral reef teems with life). Return on a glass-bottom boat for more marine views, then whisk off to tranquil Neil Island for a quiet evening stroll.</p>
+                </div>
+                
+                <div class="itinerary-day glass">
+                    <h3><i class="fas fa-mountain"></i> Day 4: Natural Wonders</h3>
+                    <p>Watch the sunrise at Sitapur Beach on Neil, then visit the famous natural rock bridge. In the afternoon return to Port Blair and relax at Carbyn Cove's lily-covered lagoon, capping the day with a beachside supper.</p>
+                </div>
+                
+                <div class="itinerary-day glass">
+                    <h3><i class="fas fa-heart"></i> Day 5: Farewell with Memories</h3>
+                    <p>After a leisurely breakfast, bid farewell to Andaman and depart for home, carrying memories illuminated by love.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" style="background-color: #faf5f7;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Love Stories</h2>
+            </div>
+            <div class="testimonials-container">
+                <div class="testimonial-card glass">
+                    <div class="testimonial-content">
+                        <p>Rumilee made our honeymoon magical - every detail felt personalized and romantic! The private candle-lit dinner on the beach was absolutely unforgettable.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Priya">
+                        </div>
+                        <div class="author-info">
+                            <h4>Priya & Arjun</h4>
+                            <p>Bangalore</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass">
+                    <div class="testimonial-content">
+                        <p>The sunset cruise was pure poetry. We've never experienced anything so breathtaking. Rumilee truly knows how to create moments that last a lifetime.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Neha">
+                        </div>
+                        <div class="author-info">
+                            <h4>Neha & Raj</h4>
+                            <p>Mumbai</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card glass">
+                    <div class="testimonial-content">
+                        <p>From the luxury resorts to the secluded beaches, every moment felt like a dream. The couples' scuba diving experience was the highlight of our romantic getaway.</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="Ananya">
+                        </div>
+                        <div class="author-info">
+                            <h4>Ananya & Vikram</h4>
+                            <p>Delhi</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Packages Section -->
+    <section id="packages">
+        <div class="container">
+            <div class="section-title">
+                <h2>Romantic Packages</h2>
+            </div>
+            <div class="packages-container">
+                <div class="package-card glass">
+                    <h3 class="package-title">Standard</h3>
+                    <div class="package-price">₹18,000</div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Accommodation in 3★ resort</li>
+                        <li><i class="fas fa-check-circle"></i> Shared boat transfers</li>
+                        <li><i class="fas fa-check-circle"></i> Group sightseeing tours</li>
+                        <li><i class="fas fa-check-circle"></i> Inclusive sunset cruise</li>
+                        <li><i class="fas fa-check-circle"></i> Romantic group dinner under stars</li>
+                    </ul>
+                    <a href="#contact" class="btn">Book Now</a>
+                </div>
+                
+                <div class="package-card glass featured">
+                    <h3 class="package-title">Premium</h3>
+                    <div class="package-price">₹20,000</div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> Upgraded 4★ beachfront resort</li>
+                        <li><i class="fas fa-check-circle"></i> Private transfers (boat & car)</li>
+                        <li><i class="fas fa-check-circle"></i> All Standard inclusions</li>
+                        <li><i class="fas fa-check-circle"></i> Private candle-lit beach dinner</li>
+                        <li><i class="fas fa-check-circle"></i> Couple's massage session</li>
+                    </ul>
+                    <a href="#contact" class="btn">Book Now</a>
+                </div>
+                
+                <div class="package-card glass">
+                    <h3 class="package-title">Luxury</h3>
+                    <div class="package-price">₹26,000</div>
+                    <ul class="package-features">
+                        <li><i class="fas fa-check-circle"></i> 5★ luxury resort stays</li>
+                        <li><i class="fas fa-check-circle"></i> Private yacht transfers</li>
+                        <li><i class="fas fa-check-circle"></i> All Premium inclusions</li>
+                        <li><i class="fas fa-check-circle"></i> Exclusive sunset cruise</li>
+                        <li><i class="fas fa-check-circle"></i> Special couple spa treatments</li>
+                    </ul>
+                    <a href="#contact" class="btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" style="background-color: #faf5f7;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Start Your Journey</h2>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <h3>Let's Craft Your Love Story</h3>
+                    <p>Ready to embark on your romantic Andaman adventure? Our team is here to create your perfect getaway.</p>
+                    <p>Fill out the form and we'll contact you within 24 hours to start planning your dream vacation.</p>
+                    <div style="margin-top: 30px;">
+                        <p><i class="fas fa-envelope"></i> hello@rumilee.com</p>
+                        <p><i class="fas fa-phone"></i> +91 98765 43210</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Port Blair, Andaman & Nicobar Islands</p>
+                    </div>
+                </div>
+                <div class="contact-form glass">
+                    <form id="inquiryForm">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="trip">Trip Type</label>
+                            <select id="trip" name="trip" required>
+                                <option value="">Select Trip Type</option>
+                                <option value="Honeymoon">Honeymoon</option>
+                                <option value="Romantic Getaway">Romantic Getaway</option>
+                                <option value="Vacation">Vacation</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message (Optional)</label>
+                            <textarea id="message" name="message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn">Send Inquiry</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>Rumilee</h3>
+                    <p>Crafting unforgettable romantic experiences in the breathtaking Andaman Islands since 2010.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Explore</h3>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#activities">Activities</a></li>
+                        <li><a href="#itinerary">Itinerary</a></li>
+                        <li><a href="#packages">Packages</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h3>Support</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">FAQs</a></li>
+                        <li><a href="#">Terms & Conditions</a></li>
+                        <li><a href="#">Privacy Policy</a></li>
+                        <li><a href="#contact">Contact Us</a></li>
+                        <li><a href="#">Travel Advisory</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 Rumilee Romantic Andaman Tours. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navLinks = document.querySelector('.nav-links');
+        
+        hamburger.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('.nav-links a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                hamburger.classList.remove('active');
+            });
+        });
+        
+        // Header scroll effect
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+        
+        // Form submission
+        const form = document.getElementById('inquiryForm');
+        form.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your inquiry! We will contact you shortly to plan your romantic getaway.');
+            form.reset();
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
